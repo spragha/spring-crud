@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mrk.bankacc;
+package com.spragha.bankacc.model;
 
 import java.security.acl.Owner;
 import java.util.ArrayList;
@@ -47,12 +47,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  */
 @Entity
 @Table(name = "account")
-public class Account{
-
-    @Column(name = "acc_creation_date")
-    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
-    @DateTimeFormat(pattern = "yyyy/MM/dd")
-    private DateTime accCreationDate;
+public class Account{    
     
     @Column(name = "acc_number")
     @NotEmpty
@@ -66,7 +61,11 @@ public class Account{
     @JoinColumn(name = "owner_id")
     private Customer customer;
 
-
+    @Column(name = "acc_creation_date")
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+    @DateTimeFormat(pattern = "yyyy/MM/dd")
+    private DateTime accCreationDate;
+    
     public void setAccCreationDate(DateTime accCreationDate) {
         this.accCreationDate = accCreationDate;
     }
