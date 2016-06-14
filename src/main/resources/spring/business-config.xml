@@ -15,7 +15,8 @@
     <!-- import the dataSource definition -->
     <import resource="datasource-config.xml"/>
 
-    <context:component-scan  base-package="org.springframework.samples.petclinic.service"/>
+    <context:component-scan
+            base-package="com.mrk.bankacc.service"/>
 
     <!-- Configurer that replaces ${...} placeholders with values from a properties file -->
     <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
@@ -23,8 +24,8 @@
 
      <!-- enables scanning for @Transactional annotations -->
     <tx:annotation-driven />
- 	
-	   
+ 
+	
 	<!-- ==================		 3 Profiles to choose from 			=================== 
 									- default (uses JPA)
 									- jdbc (uses Spring" JdbcTemplate)
@@ -33,13 +34,6 @@
 	
     <beans profile="default">
     <!-- <beans profile="default,spring-data-jpa"> -->
-        
-        <!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) -->
-        <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
-              p:entityManagerFactory-ref="entityManagerFactory"/>
-		
-		 <tx:annotation-driven transaction-manager="transactionManager" />
-        
         <!-- JPA EntityManagerFactory -->
         <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
               p:dataSource-ref="dataSource">
@@ -53,22 +47,22 @@
                  -->
             </property>
             <!-- gDickens: BOTH Persistence Unit and Packages to Scan are NOT compatible, persistenceUnit will win -->
-            <property name="persistenceUnitName" value="petclinic"/>
-            <property name="packagesToScan" value="com.spragha.bankacc.model"/>
-        </bean>       
+            <property name="persistenceUnitName" value="bank"/>
+            <property name="packagesToScan" value="com.mrk.bankacc"/>
+        </bean>
+
+        <!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) -->
+        <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
+              p:entityManagerFactory-ref="entityManagerFactory"/>
+
 
         <!--
             Post-processor to perform exception translation on @Repository classes (from native
             exceptions such as JPA PersistenceExceptions to Spring's DataAccessException hierarchy).
         -->
-       <!--  <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/> -->
+        <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
         
-		<context:component-scan base-package="org.springframework.samples.petclinic.repository.jpa"/>
-		
-		<!-- Spring Data JPA Repository Configuration -->
-    	<jpa:repositories base-package="org.springframework.samples.petclinic.repository.jpa"
-                      entity-manager-factory-ref="entityManagerFactory"
-                      transaction-manager-ref="transactionManager"/> 
+		<context:component-scan base-package="com.mrk.bankacc.repository.jpa"/>
     </beans>
 <!-- Removed other impplementation keeping default to only JPA -->
 <!--     <beans profile="jdbc">

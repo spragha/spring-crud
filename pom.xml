@@ -401,7 +401,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
-					<warName>petclinic</warName>
+					<warName>bank</warName>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -447,7 +447,7 @@
 				<configuration>
 					<server>tomcat-development-server</server>
 					<port>9966</port>
-					<path>/petclinic</path>
+					<path>/bank</path>
 				</configuration>
 			</plugin>
 		</plugins>
