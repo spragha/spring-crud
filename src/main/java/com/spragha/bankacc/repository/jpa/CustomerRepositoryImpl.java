@@ -19,7 +19,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     public Collection<Customer> findByLastName(String lastName) {
         // using 'join fetch' because a single query should load both owners and pets
         // using 'left join fetch' because it might happen that an owner does not have pets yet
-        Query query = this.em.createQuery("SELECT DISTINCT customer FROM Customer customer left join fetch customer.account WHERE customer.lastName LIKE :lastName");
+        Query query = this.em.createQuery("SELECT DISTINCT customer FROM Customer customer left join fetch customer.accounts WHERE customer.lastName LIKE :lastName");
         query.setParameter("lastName", lastName + "%");
         return query.getResultList();
     }
