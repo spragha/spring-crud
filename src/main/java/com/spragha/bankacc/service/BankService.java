@@ -1,11 +1,11 @@
-package com.mrk.bankacc.service;
+package com.spragha.bankacc.service;
 
 import java.util.Collection;
 
 import org.springframework.dao.DataAccessException;
 
-import com.mrk.bankacc.model.Account;
-import com.mrk.bankacc.model.Customer;
+import com.spragha.bankacc.model.Account;
+import com.spragha.bankacc.model.Customer;
 
 public interface BankService {
 

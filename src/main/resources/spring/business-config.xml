@@ -16,7 +16,7 @@
     <import resource="datasource-config.xml"/>
 
     <context:component-scan
-            base-package="com.mrk.bankacc.service"/>
+            base-package="com.spragha.bankacc.service"/>
 
     <!-- Configurer that replaces ${...} placeholders with values from a properties file -->
     <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
@@ -48,7 +48,7 @@
             </property>
             <!-- gDickens: BOTH Persistence Unit and Packages to Scan are NOT compatible, persistenceUnit will win -->
             <property name="persistenceUnitName" value="bank"/>
-            <property name="packagesToScan" value="com.mrk.bankacc"/>
+            <property name="packagesToScan" value="com.spragha.bankacc"/>
         </bean>
 
         <!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) -->
@@ -62,7 +62,7 @@
         -->
         <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
         
-		<context:component-scan base-package="com.mrk.bankacc.repository.jpa"/>
+		<context:component-scan base-package="com.spragha.bankacc.repository.jpa"/>
     </beans>
 <!-- Removed other impplementation keeping default to only JPA -->
 <!--     <beans profile="jdbc">

@@ -1,7 +1,7 @@
-package com.mrk.bankacc.repository;
+package com.spragha.bankacc.repository;
 
 import org.springframework.dao.DataAccessException;
-import com.mrk.bankacc.model.Account;
+import com.spragha.bankacc.model.Account;
 
 public interface AccountRepository {
 	

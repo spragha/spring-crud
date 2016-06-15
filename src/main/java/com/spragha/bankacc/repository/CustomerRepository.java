@@ -1,8 +1,8 @@
-package com.mrk.bankacc.repository;
+package com.spragha.bankacc.repository;
 import java.util.Collection;
 
 import org.springframework.dao.DataAccessException;
-import com.mrk.bankacc.model.Customer;
+import com.spragha.bankacc.model.Customer;
 
 public interface CustomerRepository {
 

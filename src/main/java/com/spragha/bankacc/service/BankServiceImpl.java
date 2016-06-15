@@ -1,4 +1,4 @@
-package com.mrk.bankacc.service;
+package com.spragha.bankacc.service;
 
 import java.util.Collection;
 
@@ -7,10 +7,10 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.mrk.bankacc.model.Account;
-import com.mrk.bankacc.model.Customer;
-import com.mrk.bankacc.repository.AccountRepository;
-import com.mrk.bankacc.repository.CustomerRepository;
+import com.spragha.bankacc.model.Account;
+import com.spragha.bankacc.model.Customer;
+import com.spragha.bankacc.repository.AccountRepository;
+import com.spragha.bankacc.repository.CustomerRepository;
 
 @Service
 public class BankServiceImpl implements BankService {

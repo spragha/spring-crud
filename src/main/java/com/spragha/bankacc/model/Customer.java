@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mrk.bankacc.model;
+package com.spragha.bankacc.model;
 
 import java.util.ArrayList;
 import java.util.Collections;

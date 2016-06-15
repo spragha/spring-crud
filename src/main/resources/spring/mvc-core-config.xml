@@ -20,7 +20,7 @@
         - POJOs labeled with the @Controller and @Service annotations are auto-detected.
     -->
     <context:component-scan
-            base-package="com.mrk.bankacc.web"/>
+            base-package="com.spragha.bankacc.web"/>
 
     <!-- <mvc:annotation-driven conversion-service="conversionService"/> -->
 	<mvc:annotation-driven/>

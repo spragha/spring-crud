@@ -1,4 +1,4 @@
-package com.mrk.bankacc.web;
+package com.spragha.bankacc.web;
 
 import java.util.Collection;
 import java.util.Map;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.mrk.bankacc.model.Customer;
-import com.mrk.bankacc.service.BankService;
+import com.spragha.bankacc.model.Customer;
+import com.spragha.bankacc.service.BankService;
 
 @Controller
 @SessionAttributes(types = Customer.class)

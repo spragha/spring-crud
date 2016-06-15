@@ -1,12 +1,12 @@
-package com.mrk.bankacc.repository.jpa;
+package com.spragha.bankacc.repository.jpa;
 
 import java.util.Collection;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import com.mrk.bankacc.model.Customer;
-import com.mrk.bankacc.repository.CustomerRepository;
+import com.spragha.bankacc.model.Customer;
+import com.spragha.bankacc.repository.CustomerRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
