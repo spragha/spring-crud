@@ -16,14 +16,14 @@
 <div class="container">
     <jsp:include page="../fragments/bodyHeader.jsp"/>
     <c:choose>
-        <c:when test="${owner['new']}"><c:set var="method" value="post"/></c:when>
+        <c:when test="${customer['new']}"><c:set var="method" value="post"/></c:when>
         <c:otherwise><c:set var="method" value="put"/></c:otherwise>
     </c:choose>
 
     <h2>
-        <c:if test="${owner['new']}">New </c:if> Owner
+        <c:if test="${customer['new']}">New </c:if> customer
     </h2>
-    <form:form modelAttribute="owner" method="${method}" class="form-horizontal" id="add-owner-form">
+    <form:form modelAttribute="customer" method="${method}" class="form-horizontal" id="add-customer-form">
         <petclinic:inputField label="First Name" name="firstName"/>
         <petclinic:inputField label="Last Name" name="lastName"/>
         <petclinic:inputField label="Address" name="address"/>
@@ -32,11 +32,11 @@
 
         <div class="form-actions">
             <c:choose>
-                <c:when test="${owner['new']}">
-                    <button type="submit">Add Owner</button>
+                <c:when test="${customer['new']}">
+                    <button type="submit">Add Customer</button>
                 </c:when>
                 <c:otherwise>
-                    <button type="submit">Update Owner</button>
+                    <button type="submit">Update Customer</button>
                 </c:otherwise>
             </c:choose>
         </div>

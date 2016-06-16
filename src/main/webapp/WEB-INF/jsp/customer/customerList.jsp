@@ -13,9 +13,9 @@
 <body>
 <div class="container">
     <jsp:include page="../fragments/bodyHeader.jsp"/>
-    <h2>Owners</h2>
+    <h2>Customer</h2>
     
-    <datatables:table id="customer" data="${selections}" cdn="true" row="owner" theme="bootstrap2" 
+    <datatables:table id="customer" data="${selections}" cdn="true" row="Customer" theme="bootstrap2" 
                       cssClass="table table-striped" paginate="false" info="false" export="pdf">
         <datatables:column title="Name" cssStyle="width: 150px;" display="html">
             <spring:url value="/customer/{customerId}.html" var="customerUrl">

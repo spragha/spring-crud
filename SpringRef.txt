@@ -1,2 +1,4 @@
 GET A GET method should be used to retrieve data from the server. Multiple get requests to the same URL should be valid and no data should be changed on the server side.
 (Briefly - POST - for creating data, PUT - for updating data and DELETE for deleting data)
+
+createOrUpdateCustomerForm.jsp left petclinic removing it

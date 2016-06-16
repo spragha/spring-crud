@@ -17,7 +17,7 @@
 
     <spring:url value="/customer.html" var="formUrl"/>
     <form:form modelAttribute="customer" action="${fn:escapeXml(formUrl)}" method="get" class="form-horizontal"
-               id="search-owner-form">
+               id="search-customer-form">
         <fieldset>
             <div class="control-group" id="lastName">
                 <label class="control-label">Last name </label>
